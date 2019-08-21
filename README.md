@@ -84,7 +84,6 @@ Then, create a new file in your `app/controllers` folder called `users_controlle
 
 ```
 class UsersController < ApplicationController
-  include ActionController::Serialization
   def index
     @users = User.all
     render json: @users
