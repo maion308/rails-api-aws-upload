@@ -19,11 +19,15 @@ Amazon Web Services has a lot of available services. The S3 bucket is a popular 
 
 **NOTE:** In order to set up an account, you will have to put a credit card on file. There will be no charge for a small app like we're building here; however, if you're not careful with your credentials and someone else gets access to your account, they may use an expensive amount of storage space and you will get charged for it by AWS. Their security team is pretty good at handling fraudulent instances like this; however, it's definitely a problem you want to avoid, so **hide your credentials**.
 
-Sign up for an AWS account and use the following guide to set up an S3 bucket on AWS: https://medium.com/alturasoluciones/setting-up-rails-5-active-storage-with-amazon-s3-3d158cf021ff
+Sign up for an AWS account. When you log in, make sure you use **the email address** you signed up with, not a username. If the login screen is asking for your "IAM" username, you're probably logging in incorrectly. 
+
+Once you're logged in, use the following guide to set up an S3 bucket on AWS: https://medium.com/alturasoluciones/setting-up-rails-5-active-storage-with-amazon-s3-3d158cf021ff
+
+>Note: Bucket names on AWS **need to be unique** across all of Amazon Web Services, so you may have to be pretty creative. 
 
 The important pieces you'll need are:
 - your S3 bucket name
-- your region
+- your region (should be in the format of `us-east-1`. You'll should be able to see it in the URL bar)
 - your access key id
 - your secret access key
 
@@ -57,8 +61,8 @@ amazon:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-  region: us-east-1
-  bucket: rails-upload-practice
+  region: your_region
+  bucket: your_bucket_name
 ```
 
 >Note: Make sure the `region` and `bucket` match up with the bucket you set up on AWS.
