@@ -15,11 +15,11 @@ Then, run `rails db:create` and `rails db:migrate`.
 We'll come back to our Rails app in a moment, but before we continue, let's get started on AWS.
 
 ## Setting Up AWS S3 Bucket
-Amazon Web Services has a lot of available services. The S3 bucket is a popular storage system for files — especially images. 
+Amazon Web Services has a lot of available services. The S3 bucket is a popular storage system for files — especially images. To get started, sign up for an AWS account. 
 
-**NOTE:** In order to set up an account, you will have to put a credit card on file. There will be no charge for a small app like we're building here; however, if you're not careful with your credentials and someone else gets access to your account, they may use an expensive amount of storage space and you will get charged for it by AWS. Their security team is pretty good at handling fraudulent instances like this; however, it's definitely a problem you want to avoid, so **hide your credentials**.
+>**NOTE:** In order to set up an account, you will have to put a credit card on file. There will be no charge for a small app like we're building here; however, if you're not careful with your credentials and someone else gets access to your account, they may use an expensive amount of storage space and you will get charged for it by AWS. Their security team is pretty good at handling fraudulent instances like this; however, it's definitely a problem you want to avoid, so **hide your credentials**.
 
-Sign up for an AWS account. When you log in, make sure you use **the email address** you signed up with, not a username. If the login screen is asking for your "IAM" username, you're probably logging in incorrectly. 
+>Note: When you log in, make sure you use **the email address** you signed up with, not a username. If the login screen is asking for your "IAM" username, you're probably logging in incorrectly. 
 
 Once you're logged in, use the following guide to set up an S3 bucket on AWS: https://medium.com/alturasoluciones/setting-up-rails-5-active-storage-with-amazon-s3-3d158cf021ff
 
